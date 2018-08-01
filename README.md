@@ -43,7 +43,7 @@ watch Aquila-cli getinfo
 ```
 Make sure the version number matches.
 ```
-"version" : 2030000,     ------------------This is the latest version (Aquila v1.1.0.5)
+"version" : 1010005,     ------------------This is the latest version (Aquila v1.1.0.5)
 ```
 
 Once the block height matches the block explorer issue the following command.
