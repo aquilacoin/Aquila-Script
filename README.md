@@ -1,4 +1,4 @@
-![](https://cdn.discordapp.com/attachments/460803845614862337/462105794498789376/Nibex.png)
+![](https://github.com/CryptoNeverSleeps/Aquila-Script/blob/master/logo-full-white2x.png)
 
 # Aquila v1.1.0.5 Masternode Setup Guide [ Ubuntu 16.04 ]
 
