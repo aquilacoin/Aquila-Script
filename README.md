@@ -23,6 +23,9 @@ Steps generate your own private key.
 3.  Type the following command: **masternode genkey**  
 4. You now have your generated **Private Key**  (MasternodePrivKey)
 
+## If you just need to update to a new version follow guide here.
+https://github.com/CryptoNeverSleeps/Aquila-Update-Script
+
 
 ## VPS installation
 ```
