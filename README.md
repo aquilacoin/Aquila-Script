@@ -18,7 +18,7 @@ Shell script to install a [Aquila Masternode](https://aquila.online/) on a Linux
 **This script can generate a private key for you, or you can generate your own private key on the Desktop software.**
 
 Steps generate your own private key. 
-1.  Download and install Aquila v1.1.0.5 for Windows -   Download Link  - https://github.com/aquilacoin/AquilaX/releases/
+1.  Download and install Aquila v1.2.0.0 for Windows -   Download Link  - https://github.com/aquilacoin/AquilaX/releases/
 2.  Go to **Tools -> Click "Debug Console"** 
 3.  Type the following command: **masternode genkey**  
 4. You now have your generated **Private Key**  (MasternodePrivKey)
@@ -26,7 +26,9 @@ Steps generate your own private key.
 
 ## VPS installation
 ```
-wget -q https://github.com/CryptoNeverSleeps/Aquila-Script/raw/master/aquila-install.sh
+wget -q https://raw.githubusercontent.com/aquilacoin/Aquila-Script/master/aquila-install.sh
+```
+```
 bash aquila-install.sh
 ```
 Once the VPS installation is finished.
@@ -43,7 +45,7 @@ watch Aquila-cli getinfo
 ```
 Make sure the version number matches.
 ```
-"version" : 1010005,     ------------------This is the latest version (Aquila v1.1.0.5)
+"version" : 1020000,     ------------------This is the latest version (Aquila v1.2.0.0)
 ```
 
 Once the block height matches the block explorer issue the following command.
