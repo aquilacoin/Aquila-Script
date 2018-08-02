@@ -1,4 +1,4 @@
-![](https://github.com/CryptoNeverSleeps/Aquila-Script/blob/master/logoaqx.png)
+![logo](https://aquila.online/images/logo2x.png)
 
 # Aquila v1.1.0.5 Masternode Setup Guide [ Ubuntu 16.04 ]
 
