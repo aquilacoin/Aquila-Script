@@ -8,7 +8,7 @@ TITLE="Aquila VPS Setup"
 MENU="Choose one of the following options:"
 
 OPTIONS=(1 "Install New VPS Server"
-         2 "Update to new version VPS Server"
+         2 "Reconfigure Existing VPS Server"
          3 "Start Aquila Masternode"
 	 4 "Stop Aquila Masternode"
 	 5 "Aquila Server Status"
@@ -24,7 +24,6 @@ CHOICE=$(whiptail --clear\
 
 clear
 case $CHOICE in
-
         1)
             echo Starting the install process.
 echo Checking and installing VPS server prerequisites. Please wait.
@@ -71,10 +70,10 @@ echo Configuring server firewall.
 sudo ufw allow 45454
 echo Server firewall configuration completed.
 echo Downloading AquilaX install files.
-wget https://github.com/aquilacoin/AquilaX/releases/download/1.2.0.0/AquilaX-linux.tar.gz
+wget https://github.com/aquilacoin/AquilaX/releases/download/1.2.0.0/aqx-linux.tar.gz
 echo Download complete.
 echo Installing AquilaX.
-tar -xvf aqx-linux.tar.gz
+tar xvf aqx-linux.tar.gz
 chmod 775 ./Aquilad
 chmod 775 ./Aquila-cli
 echo AquilaX install complete. 
@@ -131,30 +130,69 @@ echo If you get a message asking to rebuild the database, please hit Ctr + C and
 echo If you still have further issues please reach out to support in our Discord channel. 
 echo Please use the following Private Key when setting up your wallet: $GENKEY
             ;;
-	    
-	    
-	    
         2)
-sudo ./Aquila-cli -daemon stop
-echo "! Stopping Aquila Daemon !"
-
-echo "! Removing Aquila !"
-sudo rm -f Aquilad
-sudo rm -f Aquila-cli
-sudo rm -f Aquila-qt
-
-
+rm Aquilad
+rm Aquila-cli
+rm /root/.Aquila/Aquila.conf
+RPCUSER=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+RPCPASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+VPSIP=$(curl -s4 icanhazip.com)
 
 wget https://github.com/aquilacoin/AquilaX/releases/download/1.2.0.0/aqx-linux.tar.gz
 echo Download complete.
 echo Installing AquilaX.
-tar -xvf aqx-linux.tar.gz
+tar xvf aqx-linux.tar.gz
 chmod 775 ./Aquilad
 chmod 775 ./Aquila-cli
 echo AquilaX install complete. 
 rm aqx-linux.tar.gz
 
+mkdir -p /root/.Aquila && touch /root/.Aquila/Aquila.conf
 
+cat << EOF > /root/.Aquila/Aquila.conf
+rpcuser=$RPCUSER
+rpcpassword=$RPCPASSWORD
+rpcallowip=127.0.0.1
+server=1
+listen=1
+daemon=1
+staking=1
+rpcallowip=127.0.0.1
+rpcport=45455
+port=45454
+addnode=139.99.195.25:45454
+addnode=139.99.198.86:45454
+addnode=139.99.194.139:45454
+addnode=80.211.189.222:45454
+addnode=104.207.155.156:45454
+addnode=66.42.80.73:45454
+addnode=104.207.155.156:45454
+addnode=144.202.54.93:45454
+EOF
+
+rm AQX_Install.sh
+./Aquilad -daemon
+sleep 30
+GENKEY=$(./Aquila-cli masternode genkey)
+./Aquila-cli stop
+
+cat << EOF >> /root/.Aquila/Aquila.conf
+logtimestamps=1
+maxconnections=256
+masternode=1
+externalip=$VPSIP
+masternodeprivkey=$GENKEY
+EOF
+clear
+./Aquilad -daemon
+
+rm AQX_Install.sh
+clear
+echo AquilaX configuration file created successfully. 
+echo Aquila Server Started Successfully using the command ./Aquilad -daemon
+echo If you get a message asking to rebuild the database, please hit Ctr + C and run ./Aquilad -daemon -reindex
+echo If you still have further issues please reach out to support in our Discord channel. 
+echo Please use the following Private Key when setting up your wallet: $GENKEY
             ;;
         3)
             ./Aquilad -daemon
