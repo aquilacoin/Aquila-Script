@@ -43,10 +43,6 @@ Check the block height with the following command
 ```
 watch Aquila-cli getinfo
 ```
-Make sure the version number matches.
-```
-"version" : 1020000,     ------------------This is the latest version (Aquila v1.2.0.0)
-```
 
 Once the block height matches the block explorer issue the following command.
 ```
@@ -107,23 +103,4 @@ You want to see **"Masternode started successfully and Status 4"**
 Aquila-cli masternode status  
 Aquila-cli getinfo
 ```
-
-Also, if you want to check/start/stop **Aquila**, run one of the following commands as **root**:
-
-```
-systemctl status Aquila.service          #To check if Aquila service is running  
-systemctl start Aquila.service           #To start Aquila service  
-systemctl stop Aquila.service           #To stop Aquila service  
-systemctl is-enabled Aquila.service      #To check if Aquila service is enabled on boot  
-```  
-
-***
-
-## Donations
-
-Any donation is highly appreciated
-
-**AQX**: XUC1s4PriFDjsS76pVeZC6otaVZ4SkWGk6  
-**BTC**: 32PN27dDZhUYAmyJTWuzDvNscbVpkL9855  
-**ETH**: 0x02680cdF57EEDC20C8A12036CA03e8D5F813b33b  
-**LTC**: MKYX9Pm58z6xSWT4Rc3CynjR58nj8hKo4F  
+  
