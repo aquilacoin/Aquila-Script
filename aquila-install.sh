@@ -11,8 +11,8 @@ OPTIONS=(1 "Install New VPS Server"
          2 "Update to new version VPS Server"
          3 "Start Aquila Masternode"
 	 4 "Stop Aquila Masternode"
-	 5 "Rebuild Aquila Masternode Index"
-	 6 "Aquila Server Status")
+	 5 "Aquila Server Status"
+	 6 "Rebuild Aquila Masternode Index")
 
 CHOICE=$(whiptail --clear\
 		--backtitle "$BACKTITLE" \
@@ -158,15 +158,15 @@ rm aqx-linux.tar.gz
             ;;
         3)
             ./Aquilad -daemon
-		echo "If you get a message asking to rebuild the database, please hit Ctr + C and rebuild Aquila Index. (Option 5)"
+		echo "If you get a message asking to rebuild the database, please hit Ctr + C and rebuild Aquila Index. (Option 6)"
             ;;
 	4)
             ./Aquila-cli stop
             ;;
 	5)
-           ./Aquilad -daemon -reindex
-            ;;
+	    ./Aquila-cli getinfo
+	    ;;
         6)
-	   ./Aquila-cli getinfo
-	   ;;
+	     ./Aquilad -daemon -reindex
+            ;;
 esac
