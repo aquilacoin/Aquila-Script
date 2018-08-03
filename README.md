@@ -25,12 +25,25 @@ Steps generate your own private key.
 
 
 ## VPS installation
+First you will need a VPS to continue on with this guide. If you do not have one get one from here [Vultr.](https://www.vultr.com/?ref=7424168)
+
+Next step is to download the script on the vps with command below.
 ```
 wget -q https://raw.githubusercontent.com/aquilacoin/Aquila-Script/master/aquila-install.sh
 ```
+This command will run the script.
 ```
 bash aquila-install.sh
 ```
+You will have 6 options one you run the command above.
+1. This option Will install a fresh MNN VPS instance
+2. This option will update your MN wallet on the vps if a network or wallet update is needed.
+3. This option will Start Aquila Masternode
+4. This option will Stop Aquila Masternode
+5. This option will show Aquila Server Status
+6. This option will Rebuild Aquila Masternode Index
+
+
 Once the VPS installation is finished.
 
 Check the block height
@@ -100,7 +113,8 @@ You want to see **"Masternode started successfully and Status 4"**
 ## Usage:
 
 ```
-Aquila-cli masternode status  
 Aquila-cli getinfo
+Aquila-cli mnsync status
+Aquila-cli masternode status
 ```
   
