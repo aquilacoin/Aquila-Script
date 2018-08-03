@@ -48,14 +48,15 @@ Once the VPS installation is finished.
 
 Check the block height
 
+```
+watch Aquila-cli getinfo
+```
+
 We want the blocks to match whats on the Aquila block explorer (http://exploreraqx.aquila.online/)
 
 Once they match you can proceed with the rest of the guide.
 
-Check the block height with the following command
-```
-watch Aquila-cli getinfo
-```
+
 
 Once the block height matches the block explorer issue the following command.
 ```
