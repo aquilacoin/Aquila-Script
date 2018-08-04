@@ -14,6 +14,7 @@ OPTIONS=(1 "Install New VPS Server"
 	 5 "Aquila Server Status"
 	 6 "Rebuild Aquila Masternode Index")
 
+
 CHOICE=$(whiptail --clear\
 		--backtitle "$BACKTITLE" \
                 --title "$TITLE" \
@@ -24,7 +25,6 @@ CHOICE=$(whiptail --clear\
 
 clear
 case $CHOICE in
-
         1)
             echo Starting the install process.
 echo Checking and installing VPS server prerequisites. Please wait.
@@ -71,7 +71,7 @@ echo Configuring server firewall.
 sudo ufw allow 45454
 echo Server firewall configuration completed.
 echo Downloading AquilaX install files.
-wget https://github.com/aquilacoin/AquilaX/releases/download/1.2.0.0/AquilaX-linux.tar.gz
+wget https://github.com/aquilacoin/AquilaX/releases/download/1.2.0.0/aqx-linux.tar.gz
 echo Download complete.
 echo Installing AquilaX.
 tar -xvf aqx-linux.tar.gz
