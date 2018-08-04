@@ -96,6 +96,8 @@ echo Now ready to setup AquilaX configuration file.
 RPCUSER=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 RPCPASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 VPSIP=$(curl -s4 icanhazip.com)
+echo Please input your private key.
+read GENKEY
 
 mkdir -p /root/.Aquila && touch /root/.Aquila/Aquila.conf
 
@@ -110,6 +112,11 @@ staking=1
 rpcallowip=127.0.0.1
 rpcport=45455
 port=45454
+logtimestamps=1
+maxconnections=256
+masternode=1
+externalip=$VPSIP
+masternodeprivkey=$GENKEY
 addnode=139.99.195.25:45454
 addnode=139.99.198.86:45454
 addnode=139.99.194.139:45454
@@ -121,17 +128,6 @@ addnode=144.202.54.93:45454
 EOF
 clear
 ./Aquilad -daemon
-sleep 30
-GENKEY=$(./Aquila-cli masternode genkey)
-
-cat << EOF >> /root/.Aquila/Aquila.conf
-logtimestamps=1
-maxconnections=256
-masternode=1
-externalip=$VPSIP
-masternodeprivkey=$GENKEY
-EOF
-
 ./Aquila-cli stop
 ./Aquilad -daemon
 clear
