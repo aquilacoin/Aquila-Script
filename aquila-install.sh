@@ -78,7 +78,7 @@ tar -xvf AquilaX-linux.tar.gz
 chmod 775 ./Aquilad
 chmod 775 ./Aquila-cli
 echo AquilaX install complete. 
-rm aqx-linux.tar.gz
+sudo rm -rf AquilaX-linux.tar.gz
 clear
 echo Now ready to setup AquilaX configuration file.
 
@@ -109,7 +109,6 @@ addnode=104.207.155.156:45454
 addnode=144.202.54.93:45454
 EOF
 clear
-rm AQX_Install.sh
 ./Aquilad -daemon
 sleep 30
 GENKEY=$(./Aquila-cli masternode genkey)
@@ -132,16 +131,17 @@ echo If you still have further issues please reach out to support in our Discord
 echo Please use the following Private Key when setting up your wallet: $GENKEY
             ;;
 	    
-	    
-	    
+    
         2)
 sudo ./Aquila-cli -daemon stop
 echo "! Stopping Aquila Daemon !"
 
 echo "! Removing Aquila !"
-sudo rm -f Aquilad
-sudo rm -f Aquila-cli
-sudo rm -f Aquila-qt
+sudo rm -rf aqx_install.sh
+sudo rm -rf ubuntu.zip
+sudo rm -rf Aquilad
+sudo rm -rf Aquila-cli
+sudo rm -rf Aquila-qt
 
 
 
@@ -152,8 +152,7 @@ tar -xvf AquilaX-linux.tar.gz
 chmod 775 ./Aquilad
 chmod 775 ./Aquila-cli
 echo AquilaX install complete. 
-rm aqx-linux.tar.gz
-
+sudo rm -rf AquilaX-linux.tar.gz
 
             ;;
         3)
