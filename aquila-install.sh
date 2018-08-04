@@ -67,12 +67,22 @@ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-d
 sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler -y
 clear
 echo VPS Server prerequisites installed.
+
+
 echo Configuring server firewall.
+sudo apt-get install -y ufw
 sudo ufw allow 45454
+sudo ufw allow ssh/tcp
+sudo ufw limit ssh/tcp
+sudo ufw logging on
+echo "y" | sudo ufw enable
+sudo ufw status
 echo Server firewall configuration completed.
+
 echo Downloading AquilaX install files.
 wget https://github.com/aquilacoin/AquilaX/releases/download/1.2.0.0/AquilaX-linux.tar.gz
 echo Download complete.
+
 echo Installing AquilaX.
 tar -xvf AquilaX-linux.tar.gz
 chmod 775 ./Aquilad
@@ -80,6 +90,7 @@ chmod 775 ./Aquila-cli
 echo AquilaX install complete. 
 sudo rm -rf AquilaX-linux.tar.gz
 clear
+
 echo Now ready to setup AquilaX configuration file.
 
 RPCUSER=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
@@ -135,6 +146,16 @@ echo Please use the following Private Key when setting up your wallet: $GENKEY
         2)
 sudo ./Aquila-cli -daemon stop
 echo "! Stopping Aquila Daemon !"
+
+echo Configuring server firewall.
+sudo apt-get install -y ufw
+sudo ufw allow 45454
+sudo ufw allow ssh/tcp
+sudo ufw limit ssh/tcp
+sudo ufw logging on
+echo "y" | sudo ufw enable
+sudo ufw status
+echo Server firewall configuration completed.
 
 echo "! Removing Aquila !"
 sudo rm -rf aqx_install.sh
