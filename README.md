@@ -44,6 +44,13 @@ You will have 6 options one you run the command above.
 6. This option will Rebuild Aquila Masternode Index
 
 
+If you need to go back and either start or stop Aquila just use this command.
+```
+bash aquila-install.sh
+```
+That command above will be your shortcut to control your masternode. 
+More commands will come in time.
+
 Once the VPS installation is finished.
 
 Check the block height
