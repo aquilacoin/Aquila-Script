@@ -121,8 +121,8 @@ You want to see **"Masternode started successfully and Status 4"**
 ## Usage:
 
 ```
-Aquila-cli getinfo
-Aquila-cli mnsync status
-Aquila-cli masternode status
+./Aquila-cli getinfo
+./Aquila-cli mnsync status
+./Aquila-cli masternode status
 ```
   
