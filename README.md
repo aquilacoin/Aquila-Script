@@ -1,6 +1,6 @@
 ![logo](https://aquila.online/images/logo2x.png)
 
-# Aquila v1.2.0.0 Masternode Setup Guide [ Ubuntu 16.04 ]
+# Aquila v1.1.0.0 Masternode Setup Guide [ Ubuntu 16.04 ]
 
 THIS GUIDE IS FOR ROOT USERS -
 
