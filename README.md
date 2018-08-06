@@ -111,7 +111,7 @@ startmasternode alias 0 MN1
 14. Login to your VPS and check your masternode status by running the following command:.
 
 ```
-Aquila-cli masternode status
+./Aquila-cli masternode status
 ```
 
 You want to see **"Masternode started successfully and Status 4"**
