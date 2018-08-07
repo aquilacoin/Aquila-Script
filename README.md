@@ -29,12 +29,9 @@ First you will need a VPS to continue on with this guide. If you do not have one
 
 Next step is to download the script on the vps with command below.
 ```
-wget -q https://raw.githubusercontent.com/aquilacoin/Aquila-Script/master/aquila-install.sh
+cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/aquilacoin/Aquila-Script/master/aquila-install.sh)"
 ```
-This command will run the script.
-```
-bash aquila-install.sh
-```
+
 You will have 6 options one you run the command above.
 1. This option Will install a fresh MNN VPS instance
 2. This option will update your MN wallet on the vps if a network or wallet update is needed.
