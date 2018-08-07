@@ -80,7 +80,7 @@ sudo ufw status
 echo Server firewall configuration completed.
 
 echo Downloading AquilaX install files.
-wget https://github.com/aquilacoin/AquilaX/releases/download/1.2.0.0/AquilaX-linux.tar.gz
+wget https://github.com/aquilacoin/AquilaX/releases/download/1.1.0.0/AquilaX-linux.tar.gz
 echo Download complete.
 
 echo Installing AquilaX.
