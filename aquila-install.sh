@@ -162,7 +162,7 @@ sudo rm -rf Aquila-qt
 
 
 
-wget https://github.com/aquilacoin/AquilaX/releases/download/1.2.0.0/AquilaX-linux.tar.gz
+wget https://github.com/aquilacoin/AquilaX/releases/download/1.1.0.0/AquilaX-linux.tar.gz
 echo Download complete.
 echo Installing AquilaX.
 tar -xvf AquilaX-linux.tar.gz
