@@ -24,7 +24,7 @@ First you will need a VPS to continue on with this guide. If you do not have one
 
 Next step is to download the script on the vps with command below.
 ```
-cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/aquilacoin/Aquila-Script/master/aquila-install.sh)"
+cd &&  bash -c "$(wget -O - https://github.com/Coin2Play/Coin2Play-Script/blob/master/coin2play-install.sh)"
 ```
 
 You will have 6 options one you run the command above.
