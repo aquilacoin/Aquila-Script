@@ -1,6 +1,4 @@
-![logo](https://aquila.online/images/logo2x.png)
-
-# Aquila v1.2.0.0 Masternode Setup Guide [ Ubuntu 16.04 ]
+# Coin2Play Masternode Setup Guide [ Ubuntu 16.04 ]
 
 THIS GUIDE IS FOR ROOT USERS -
 
@@ -10,15 +8,12 @@ User=root
 Group=root
 ```
 
-Shell script to install a [Aquila Masternode](https://aquila.online/) on a Linux server running Ubuntu 16.04. Use it on your own risk.
-***
-
 ## Private Key
 
 **This script can generate a private key for you, or you can generate your own private key on the Desktop software.**
 
 Steps generate your own private key. 
-1.  Download and install Aquila v1.2.0.0 for Windows -   Download Link  - https://github.com/aquilacoin/AquilaX/releases/
+1.  Download and install Coin2Play windows wallet from Releases
 2.  Go to **Tools -> Click "Debug Console"** 
 3.  Type the following command: **masternode genkey**  
 4. You now have your generated **Private Key**  (MasternodePrivKey)
