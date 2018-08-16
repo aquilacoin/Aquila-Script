@@ -36,7 +36,7 @@ You will have 6 options one you run the command above.
 6. This option will Rebuild Coin2Play Masternode Index
 
 
-If you need to go back and either start or stop Aquila just use this command.
+If you need to go back and either start or stop Coin2Play just use this command.
 ```
 bash c2p-install.sh
 ```
@@ -51,7 +51,7 @@ Check the block height
 watch ./coin2play-cli getinfo
 ```
 
-We want the blocks to match whats on the Aquila block explorer (http://explorer.coin2play.io/)
+We want the blocks to match whats on the Coin2Play block explorer (http://explorer.coin2play.io/)
 
 Once they match you can proceed with the rest of the guide.
 
