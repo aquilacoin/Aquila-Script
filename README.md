@@ -43,7 +43,7 @@ You will have 6 options one you run the command above.
 
 If you need to go back and either start or stop Aquila just use this command.
 ```
-bash aquila-install.sh
+cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/aquilacoin/Aquila-Script/master/aquila-install.sh)"
 ```
 That command above will be your shortcut to control your masternode. 
 More commands will come in time.
