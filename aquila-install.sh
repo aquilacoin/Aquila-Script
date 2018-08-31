@@ -170,6 +170,10 @@ tar -xvf AquilaX-linux.tar.gz
 chmod 775 ./Aquilad
 chmod 775 ./Aquila-cli
 sudo rm -rf AquilaX-linux.tar.gz
+cd /root/.Aquila
+rm -rf blocks
+rm -rf chainstate
+cd ..
 ./Aquilad -daemon
 echo AquilaX install complete. 
 
