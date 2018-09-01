@@ -175,6 +175,7 @@ chmod 775 ./Aquilad
 chmod 775 ./Aquila-cli
 sudo rm -rf AquilaX-linux.tar.gz
 
+echo "! Aquila Adding block source !"
 cd /root/.Aquila/
 rm -rf blocks
 rm -rf chainstate
