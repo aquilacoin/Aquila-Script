@@ -177,7 +177,7 @@ rm -rf blocks
 rm -rf chainstate
 wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/Aquila-chain.tar.gz
 tar xvzf Aquila-chain.tar.gz
-Aquila-chain.tar.gz
+rm -rf Aquila-chain.tar.gz
 cd ..
   
 ./Aquilad -daemon
