@@ -91,6 +91,11 @@ echo AquilaX install complete.
 sudo rm -rf AquilaX-linux.tar.gz
 clear
 
+cd /root/.Aqulia/
+rm -rf blocks
+rm -rf chainstate
+cd ..
+
   wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/AquilaX-linux.tar.gz
   tar xvzf AquilaX-linux.tar.gz >/dev/null 2>&1
   cd bin
