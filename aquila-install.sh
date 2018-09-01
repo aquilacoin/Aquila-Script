@@ -118,7 +118,9 @@ maxconnections=256
 masternode=1
 externalip=$EXTIP
 masternodeprivkey=$GENKEY
-addnode=108.224.49.202
+addnode=149.28.127.111:45454
+addnode=104.207.141.212:45454
+addnode=149.28.112.148:45454
 
 EOF
 clear
