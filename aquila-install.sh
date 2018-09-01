@@ -98,11 +98,9 @@ cd ..
 
   wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/AquilaX-linux.tar.gz
   tar xvzf AquilaX-linux.tar.gz >/dev/null 2>&1
-  cd bin
   cp -a blocks /root/.Aquila/
   cp -a chainstate /root/.Aquila/
   cd ..
-  rm -rf bin
   rm AquilaX-linux.tar.gz
 
 echo Now ready to setup AquilaX configuration file.
@@ -180,11 +178,11 @@ sudo rm -rf AquilaX-linux.tar.gz
 
   wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/AquilaX-linux.tar.gz
   tar xvzf AquilaX-linux.tar.gz >/dev/null 2>&1
-  cd bin
+
   cp -a blocks /root/.Aquila/
   cp -a chainstate /root/.Aquila/
   cd ..
-  rm -rf bin
+
   rm AquilaX-linux.tar.gz
   
 ./Aquilad -daemon
