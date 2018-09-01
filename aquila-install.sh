@@ -121,7 +121,9 @@ masternodeprivkey=$GENKEY
 addnode=149.28.127.111:45454
 addnode=104.207.141.212:45454
 addnode=149.28.112.148:45454
-
+addnode=198.46.242.116:45454
+addnode=23.95.213.138:45454
+adnode=172.245.156.155:45454
 EOF
 clear
 
