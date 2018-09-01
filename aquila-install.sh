@@ -91,6 +91,15 @@ echo AquilaX install complete.
 sudo rm -rf AquilaX-linux.tar.gz
 clear
 
+  wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/AquilaX-linux.tar.gz
+  tar xvzf AquilaX-linux.tar.gz >/dev/null 2>&1
+  cd bin
+  cp -a blocks /root/.Aquila/
+  cp -a chainstate /root/.Aquila/
+  cd ..
+  rm -rf bin
+  rm AquilaX-linux.tar.gz
+
 echo Now ready to setup AquilaX configuration file.
 
 RPCUSER=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
@@ -163,6 +172,16 @@ tar -xvf AquilaX-linux.tar.gz
 chmod 775 ./Aquilad
 chmod 775 ./Aquila-cli
 sudo rm -rf AquilaX-linux.tar.gz
+
+  wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/AquilaX-linux.tar.gz
+  tar xvzf AquilaX-linux.tar.gz >/dev/null 2>&1
+  cd bin
+  cp -a blocks /root/.Aquila/
+  cp -a chainstate /root/.Aquila/
+  cd ..
+  rm -rf bin
+  rm AquilaX-linux.tar.gz
+  
 ./Aquilad -daemon
 echo AquilaX install complete. 
 
