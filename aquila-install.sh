@@ -91,13 +91,6 @@ echo AquilaX install complete.
 sudo rm -rf AquilaX-linux.tar.gz
 clear
 
-cd /root/.Aqulia/
-rm -rf blocks
-rm -rf chainstate
-wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/Aquila-chain.tar.gz
-tar xvzf Aquila-chain.tar.gz
-Aquila-chain.tar.gz
-cd ..
 
 echo Now ready to setup AquilaX configuration file.
 
@@ -128,6 +121,15 @@ masternodeprivkey=$GENKEY
 
 EOF
 clear
+
+cd /root/.Aqulia/
+rm -rf blocks
+rm -rf chainstate
+wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/Aquila-chain.tar.gz
+tar xvzf Aquila-chain.tar.gz
+Aquila-chain.tar.gz
+cd ..
+
 ./Aquilad -daemon
 ./Aquila-cli stop
 ./Aquilad -daemon
