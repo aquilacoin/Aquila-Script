@@ -175,7 +175,7 @@ chmod 775 ./Aquilad
 chmod 775 ./Aquila-cli
 sudo rm -rf AquilaX-linux.tar.gz
 
-cd /root/.Aqulia/
+cd /root/.Aquila/
 rm -rf blocks
 rm -rf chainstate
 wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/Aquila-chain.tar.gz
