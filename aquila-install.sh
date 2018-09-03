@@ -131,20 +131,6 @@ clear
 ./Aquila-cli stop
 sleep 10s # Waits 10 seconds
 
-cd /root/.Aqulia/
-rm -rf blocks
-rm -rf chainstate
-rm -rf peers.dat
-rm -rf sporks
-rm -rf mnpayments.dat
-rm -rf mncache.dat
-rm -rf fee_estimates.dat
-rm -rf budget.dat
-wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/Aquila-chain.tar.gz
-tar xvzf Aquila-chain.tar.gz
-rm -rf Aquila-chain.tar.gz
-cd ..
-
 clear
 echo AquilaX configuration file created successfully. 
 echo Aquila Server Started Successfully using the command ./Aquilad -daemon
@@ -190,16 +176,6 @@ echo "Aquila Adding block source"
 cd /root/.Aquila/
 rm -rf blocks
 rm -rf chainstate
-rm -rf peers.dat
-rm -rf sporks
-rm -rf mnpayments.dat
-rm -rf mncache.dat
-rm -rf fee_estimates.dat
-rm -rf budget.dat
-wget -q https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/Aquila-chain.tar.gz
-tar xvzf Aquila-chain.tar.gz
-rm -rf Aquila-chain.tar.gz
-sleep 10s
 cd ..
   
 ./Aquilad -daemon
