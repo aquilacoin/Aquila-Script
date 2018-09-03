@@ -176,6 +176,13 @@ echo "Aquila Adding block source"
 cd /root/.Aquila/
 rm -rf blocks
 rm -rf chainstate
+rm -rf sporks
+rm -rf database
+rm -rf budget.dat
+rm -rf peersdat
+rm -rf mncache.dat
+rm -rf mnpayments.dat
+rm -rf fee_estimates.dat
 cd ..
   
 ./Aquilad -daemon
