@@ -130,7 +130,7 @@ clear
 ./Aquilad -daemon
 ./Aquila-cli stop
 sleep 10s # Waits 10 seconds
-
+./Aquilad -daemon
 clear
 echo AquilaX configuration file created successfully. 
 echo Aquila Server Started Successfully using the command ./Aquilad -daemon
