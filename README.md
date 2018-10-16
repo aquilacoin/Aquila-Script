@@ -18,7 +18,7 @@ Shell script to install a [Aquila Masternode](https://aquila.online/) on a Linux
 **This script can generate a private key for you, or you can generate your own private key on the Desktop software.**
 
 Steps generate your own private key. 
-1.  Download and install Aquila v1.2.0.1 for Windows -   Download Link  - https://github.com/aquilacoin/AquilaX/releases/
+1.  Download and install Aquila v1.2.0.2 for Windows -   Download Link  - https://github.com/aquilacoin/AquilaX/releases/
 2.  Go to **Tools -> Click "Debug Console"** 
 3.  Type the following command: **masternode genkey**  
 4. You now have your generated **Private Key**  (MasternodePrivKey)
