@@ -80,7 +80,7 @@ sudo ufw status
 echo Server firewall configuration completed.
 
 echo Downloading AquilaX install files.
-wget https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/AquilaX-linux.tar.gz
+wget https://github.com/aquilacoin/AquilaX/releases/download/v1.2.1.0/AquilaX-linux.tar.gz
 echo Download complete.
 
 echo Installing AquilaX.
@@ -118,12 +118,13 @@ maxconnections=256
 masternode=1
 externalip=$EXTIP
 masternodeprivkey=$GENKEY
-addnode=149.28.127.111:45454
-addnode=104.207.141.212:45454
-addnode=149.28.112.148:45454
-addnode=198.46.242.116:45454
-addnode=23.95.213.138:45454
-addnode=172.245.156.155:45454
+addnode=139.99.195.25:45454
+addnode=139.99.198.86:45454
+addnode=139.99.194.139:45454
+addnode=66.42.80.73:45454
+addnode=80.211.189.222:45454
+addnode=104.207.155.156:45454
+addnode=104.207.155.156:45454
 EOF
 clear
 
@@ -154,25 +155,7 @@ echo "y" | sudo ufw enable
 sudo ufw status
 echo Server firewall configuration completed.
 
-echo "! Removing Aquila !"
-sudo rm -rf aqx_install.sh*
-sudo rm -rf aquila-install.sh*
-sudo rm -rf ubuntu.zip*
-sudo rm -rf Aquilad
-sudo rm -rf Aquila-cli
-sudo rm -rf Aquila-qt
-
-
-
-wget https://github.com/aquilacoin/AquilaX/releases/download/v1.2.0.2/AquilaX-linux.tar.gz
-echo Download complete.
-echo Installing AquilaX.
-tar -xvf AquilaX-linux.tar.gz
-chmod 775 ./Aquilad
-chmod 775 ./Aquila-cli
-sudo rm -rf AquilaX-linux.tar.gz
-
-echo "Aquila Adding block source"
+echo "! Removing stuck chain files !"
 cd /root/.Aquila/
 rm -rf blocks
 rm -rf chainstate
@@ -183,7 +166,32 @@ rm -rf peersdat
 rm -rf mncache.dat
 rm -rf mnpayments.dat
 rm -rf fee_estimates.dat
-cd ..
+cd
+
+wget https://github.com/aquilacoin/AquilaX/releases/download/v1.2.1.0/Blocks.tar.gz
+echo Download complete.
+echo "! Installing Correct files now !".
+tar -xvf Blocks.tar.gz
+sudo rm -rf Blocks.tar.gz
+cd
+
+echo "! Finished removing stuck chain files !"
+
+echo "! Removing Aquila !"
+sudo rm -rf aqx_install.sh*
+sudo rm -rf aquila-install.sh*
+sudo rm -rf ubuntu.zip*
+sudo rm -rf Aquilad
+sudo rm -rf Aquila-cli
+sudo rm -rf Aquila-qt
+
+wget https://github.com/aquilacoin/AquilaX/releases/download/v1.2.1.0/AquilaX-linux.tar.gz
+echo Download complete.
+echo Installing AquilaX.
+tar -xvf AquilaX-linux.tar.gz
+chmod 775 ./Aquilad
+chmod 775 ./Aquila-cli
+sudo rm -rf AquilaX-linux.tar.gz
   
 ./Aquilad -daemon
 echo AquilaX install complete. 
