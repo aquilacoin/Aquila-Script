@@ -160,13 +160,6 @@ cd /root/.Aquila/
 rm -rf blocks
 rm -rf chainstate
 rm -rf sporks
-rm -rf database
-rm -rf budget.dat
-rm -rf peersdat
-rm -rf mncache.dat
-rm -rf mnpayments.dat
-rm -rf fee_estimates.dat
-cd
 
 wget https://github.com/aquilacoin/AquilaX/releases/download/v1.2.1.0/Blocks.tar.gz
 echo Download complete.
