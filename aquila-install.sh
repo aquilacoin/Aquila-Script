@@ -161,7 +161,7 @@ rm -rf blocks
 rm -rf chainstate
 rm -rf sporks
 
-wget https://github.com/aquilacoin/AquilaX/releases/download/v1.2.1.0/Blocks.tar.gz
+wget https://github.com/aquilacoin/AquilaX/releases/download/v1.2.1.0.HOT/blocks.zip
 echo Download complete.
 echo "! Installing Correct files now !".
 tar -xvf Blocks.tar.gz
